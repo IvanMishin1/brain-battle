@@ -17,22 +17,11 @@ public class GameHandler : MonoBehaviour
     THIS SCRIPT WILL BECOME LESS MESSY SOON                                                                        HOPEFULLY!!!
     */
 
-    //VARIABLES
     [Header("Important Variables")]
     public float Score; //Players Score
     public float WinStreak; //Quantity of wins in a row 
     public float RandomPosition; //Variable that holds the random position of the correct awnser
     public string Lang; //Holds the game's current language 
-
-    
-    [Header("Question Info")] // Curr means Current
-    public float CurrQuestionID; 
-    public string CurrQuestion;
-    public string CurrCorrectAwnser1;
-    public string CurrAwnser2;
-    public string CurrAwnser3;
-    public string CurrAwnser4;
-    public string CurrCategory;
 
     [Header("Button Packs")]
     //Button Packs are different combinations of the correct button position
@@ -48,7 +37,7 @@ public class GameHandler : MonoBehaviour
     //FUNCTIONS
     public void Update()
     {
-        if(Score < 0)
+        if(Score < 0) //This if statement makes does so that the score is never less zero
         {
             Score = 0;
         }
@@ -57,14 +46,13 @@ public class GameHandler : MonoBehaviour
     {
         
     }
-    public void Start()
+    public void Start() 
     {
         GameStart();
     }
     public void GameStart()
     {
-        Debug.Log("Next Question");
-        Buttons[0].GetComponent<Button>().interactable = true;
+        Buttons[0].GetComponent<Button>().interactable = true; // Activates all the buttons
         Buttons[1].GetComponent<Button>().interactable = true;
         Buttons[2].GetComponent<Button>().interactable = true;
         Buttons[3].GetComponent<Button>().interactable = true;
@@ -80,14 +68,12 @@ public class GameHandler : MonoBehaviour
         Buttons[13].GetComponent<Button>().interactable = true;
         Buttons[14].GetComponent<Button>().interactable = true;
         Buttons[15].GetComponent<Button>().interactable = true;
-        NextQuestionButton.SetActive(false);
+        NextQuestionButton.SetActive(false); //Sets to false the NextQuestionButton
         RandomPosition = Random.Range(1,5); //Defines the location of the correct Awnser
-        CurrQuestionID = Random.Range(1,13);
-        Debug.Log(RandomPosition);
-        
-        NextQuestionButton.SetActive(false);
-        switch(RandomPosition)
-        {
+        Debug.Log(RandomPosition); // And displays it in the console
+
+        switch(RandomPosition)  
+        { // This switch statement deploys the correct button combinations 
         case 1:
             Debug.Log("Setting Position to " + RandomPosition);
             ButtonPack1.SetActive(false);
@@ -122,7 +108,7 @@ public class GameHandler : MonoBehaviour
             break;
         }
     }
-    public void Won()                                         
+    public void Won() //Function that is called when the player wins                                  
     {        
         Debug.Log("You Won!");                                             
         Score = Score + 1;                                 
@@ -132,7 +118,7 @@ public class GameHandler : MonoBehaviour
         Buttons[1].GetComponent<Button>().interactable = false;
         Buttons[2].GetComponent<Button>().interactable = false;     //   <---- VERY MESSY CODE
         Buttons[3].GetComponent<Button>().interactable = false;                    
-        Buttons[4].GetComponent<Button>().interactable = false;                   
+        Buttons[4].GetComponent<Button>().interactable = false;                  
         Buttons[5].GetComponent<Button>().interactable = false;                    
         Buttons[6].GetComponent<Button>().interactable = false;                    
         Buttons[7].GetComponent<Button>().interactable = false;
@@ -145,7 +131,7 @@ public class GameHandler : MonoBehaviour
         Buttons[14].GetComponent<Button>().interactable = false;
         Buttons[15].GetComponent<Button>().interactable = false;  
     }
-    public void Lost()
+    public void Lost() //Function that is set when the player loses
     {
         Debug.Log("You Lost!");
         Score = Score - 1;

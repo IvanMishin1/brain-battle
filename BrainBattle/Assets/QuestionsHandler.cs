@@ -13,23 +13,24 @@ public class QuestionsHandler : MonoBehaviour
     2. The script sets the Question Info variables
     3. The 
     */
-    [Header("Text Buttons")] 
-    public Text CorrectText1;
-    public Text CorrectText2;
-    public Text CorrectText3;
-    public Text CorrectText4;
-    public Text IncorrectText1;
-    public Text IncorrectText2;
-    public Text IncorrectText3;
-    public Text IncorrectText4;
-    public Text IncorrectText5;
-    public Text IncorrectText6;
-    public Text IncorrectText7;
-    public Text IncorrectText8;
-    public Text IncorrectText9;
-    public Text IncorrectText10;
-    public Text IncorrectText11;
-    public Text IncorrectText12;
+    [Header("Text Objects")] 
+    public GameObject Text0; //Question
+    public GameObject Text1; //Awnser  
+    public GameObject Text2; //Awnser
+    public GameObject Text3;
+    public GameObject Text4;
+    public GameObject Text5;
+    public GameObject Text6;
+    public GameObject Text7;
+    public GameObject Text8;
+    public GameObject Text9; //         <---- MORE AWNSERS
+    public GameObject Text10;
+    public GameObject Text11;
+    public GameObject Text12;
+    public GameObject Text13;
+    public GameObject Text14;
+    public GameObject Text15;
+    public GameObject Text16;
 
     [Header("Question Info")]
     public float CurrQuestionID; 
@@ -46,42 +47,41 @@ public class QuestionsHandler : MonoBehaviour
     }
     public void QuestionGenerator()
     {
-        CurrQuestionID = Random.Range(0,31);//
+        CurrQuestionID = Random.Range(0,4);
         Debug.Log("QuestionID =" + CurrQuestionID);
         switch(CurrQuestionID)
         {
         case 0:
-        CurrQuestion = "TEST0";
-        CurrCorrectAwnser1 = "1";
-        CurrAwnser2 = "2";
-        CurrAwnser3 = "3";
-        CurrAwnser4 = "4";
-        CurrCategory = "5";
-        //Destroy(CorrectButtonTexts1);
+        CurrQuestion = "Witch city from the list has the largest population?";
+        CurrCorrectAwnser1 = "Moscow";
+        CurrAwnser2 = "Washington";
+        CurrAwnser3 = "Paris";
+        CurrAwnser4 = "Hamburg";
+        CurrCategory = "Geo";
         break;
         case 1:
-        CurrQuestion = "TEST1";
-        CurrCorrectAwnser1 = "1";
-        CurrAwnser2 = "2";
-        CurrAwnser3 = "3";
-        CurrAwnser4 = "4";
-        CurrCategory = "5";
+        CurrQuestion = "In whitch year was McDonalds created?";
+        CurrCorrectAwnser1 = "1955";
+        CurrAwnser2 = "1939";
+        CurrAwnser3 = "1964";
+        CurrAwnser4 = "1959";
+        CurrCategory = "Food";
         break;
         case 2:
-        CurrQuestion = "TEST2";
-        CurrCorrectAwnser1 = "1";
-        CurrAwnser2 = "2";
-        CurrAwnser3 = "3";
-        CurrAwnser4 = "4";
-        CurrCategory = "5";
+        CurrQuestion = "What is the capital of New Zealand?";
+        CurrCorrectAwnser1 = "Wellington";
+        CurrAwnser2 = "Sydney";
+        CurrAwnser3 = "Auckland";
+        CurrAwnser4 = "Capetown";
+        CurrCategory = "Geo";
         break;
         case 3:
-        CurrQuestion = "TEST3";
-        CurrCorrectAwnser1 = "1";
-        CurrAwnser2 = "2";
-        CurrAwnser3 = "3";
-        CurrAwnser4 = "4";
-        CurrCategory = "5";
+        CurrQuestion = "How many calories does a regular Big Mac contain?";
+        CurrCorrectAwnser1 = "500-600";
+        CurrAwnser2 = "400-500";
+        CurrAwnser3 = "600-700";
+        CurrAwnser4 = "300-400";
+        CurrCategory = "Food";
         break;
         case 4:
         CurrQuestion = "TEST4";
@@ -300,10 +300,26 @@ public class QuestionsHandler : MonoBehaviour
         CurrCategory = "5";
         break;
         }
-        /*CorrectText1.text = CurrCorrectAwnser1 ="2";
-        CorrectText2.text = CurrCorrectAwnser2 ="0";
-        CorrectText3.text = CurrCorrectAwnser3 ="0";
-        CorrectText4.text = CurrCorrectAwnser4 ="0";
-        */
+        Text0.GetComponent<UnityEngine.UI.Text>().text = CurrQuestion.ToString();
+
+        Text1.GetComponent<UnityEngine.UI.Text>().text = CurrCorrectAwnser1.ToString();
+        Text2.GetComponent<UnityEngine.UI.Text>().text = CurrAwnser2.ToString();
+        Text3.GetComponent<UnityEngine.UI.Text>().text = CurrAwnser3.ToString();
+        Text4.GetComponent<UnityEngine.UI.Text>().text = CurrAwnser4.ToString();
+
+        Text5.GetComponent<UnityEngine.UI.Text>().text = CurrAwnser2.ToString();
+        Text6.GetComponent<UnityEngine.UI.Text>().text = CurrCorrectAwnser1.ToString();
+        Text7.GetComponent<UnityEngine.UI.Text>().text = CurrAwnser4.ToString();
+        Text8.GetComponent<UnityEngine.UI.Text>().text = CurrAwnser3.ToString();
+
+        Text9.GetComponent<UnityEngine.UI.Text>().text = CurrAwnser3.ToString();
+        Text10.GetComponent<UnityEngine.UI.Text>().text = CurrAwnser4.ToString();
+        Text11.GetComponent<UnityEngine.UI.Text>().text = CurrCorrectAwnser1.ToString();
+        Text12.GetComponent<UnityEngine.UI.Text>().text = CurrAwnser2.ToString();
+
+        Text13.GetComponent<UnityEngine.UI.Text>().text = CurrAwnser4.ToString();
+        Text14.GetComponent<UnityEngine.UI.Text>().text = CurrAwnser3.ToString();
+        Text15.GetComponent<UnityEngine.UI.Text>().text = CurrAwnser2.ToString();
+        Text16.GetComponent<UnityEngine.UI.Text>().text = CurrCorrectAwnser1.ToString();
     }
 }

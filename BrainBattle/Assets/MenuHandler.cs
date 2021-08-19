@@ -12,6 +12,7 @@ public class MenuHandler : MonoBehaviour
     1. The Script waits for some input on the menu buttons
     2. When a menu button gets pressed, the script activates(and disactivates certain parts of the script).
     */
+    [Header("Menu Objects")]
     public GameObject Menu;
     public GameObject Game;
     public GameObject Settings;
