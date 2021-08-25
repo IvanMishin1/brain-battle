@@ -22,6 +22,7 @@ public class GameHandler : MonoBehaviour
     public float WinStreak; //Quantity of wins in a row 
     public float RandomPosition; //Variable that holds the random position of the correct awnser
     public string Lang; //Holds the game's current language 
+    public bool timerPause = false;
 
     [Header("Button Packs")]
     //Button Packs are different combinations of the correct button position
@@ -33,6 +34,11 @@ public class GameHandler : MonoBehaviour
     [Header("Buttons")]
     public GameObject NextQuestionButton; //Full screen invisible button that is activated after every question. This button generates a new question.
     public GameObject[] Buttons = new GameObject[5];
+    [Header("Timer")]
+    //GameObjects and Variables in charge of the times
+    public float maxTime = 25f;
+    public float timeLeft;//
+    public Image timerBar;
 
     //FUNCTIONS
     public void Update()
@@ -41,6 +47,15 @@ public class GameHandler : MonoBehaviour
         {
             Score = 0;
         }
+        if(timeLeft <= 0f && timerPause == false)
+        {
+            Lost();
+        }
+        if(timerPause == false)
+        {
+        timeLeft -= Time.deltaTime;
+        timerBar.fillAmount = timeLeft / maxTime;
+        }
     }
     public void Awake()
     {
@@ -48,10 +63,14 @@ public class GameHandler : MonoBehaviour
     }
     public void Start() 
     {
-        GameStart();
+        //Timer = GetComponent<Image>();
+        timeLeft = maxTime;
+        timerPause = true;
     }
     public void GameStart()
     {
+        timerPause = false;
+        timeLeft = maxTime;
         Buttons[0].GetComponent<Button>().interactable = true; // Activates all the buttons
         Buttons[1].GetComponent<Button>().interactable = true;
         Buttons[2].GetComponent<Button>().interactable = true;
@@ -70,7 +89,6 @@ public class GameHandler : MonoBehaviour
         Buttons[15].GetComponent<Button>().interactable = true;
         NextQuestionButton.SetActive(false); //Sets to false the NextQuestionButton
         RandomPosition = Random.Range(1,5); //Defines the location of the correct Awnser
-        Debug.Log(RandomPosition); // And displays it in the console
 
         switch(RandomPosition)  
         { // This switch statement deploys the correct button combinations 
@@ -109,7 +127,8 @@ public class GameHandler : MonoBehaviour
         }
     }
     public void Won() //Function that is called when the player wins                                  
-    {        
+    {   
+        timerPause = true;  
         Debug.Log("You Won!");                                             
         Score = Score + 1;                                 
         WinStreak = WinStreak + 1;                            
@@ -133,6 +152,7 @@ public class GameHandler : MonoBehaviour
     }
     public void Lost() //Function that is set when the player loses
     {
+        timerPause = true;
         Debug.Log("You Lost!");
         Score = Score - 1;
         WinStreak = 0f;

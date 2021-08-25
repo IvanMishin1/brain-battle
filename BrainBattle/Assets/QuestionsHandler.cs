@@ -43,12 +43,12 @@ public class QuestionsHandler : MonoBehaviour
 
     public void Start()
     {
-        QuestionGenerator();
+        //QuestionGenerator();
     }
     public void QuestionGenerator()
     {
-        CurrQuestionID = Random.Range(0,4);
-        Debug.Log("QuestionID =" + CurrQuestionID);
+        CurrQuestionID = Random.Range(0,6);
+        Debug.Log("QuestionID = " + CurrQuestionID);
         switch(CurrQuestionID)
         {
         case 0:
@@ -84,20 +84,20 @@ public class QuestionsHandler : MonoBehaviour
         CurrCategory = "Food";
         break;
         case 4:
-        CurrQuestion = "TEST4";
-        CurrCorrectAwnser1 = "1";
-        CurrAwnser2 = "2";
-        CurrAwnser3 = "3";
-        CurrAwnser4 = "4";
-        CurrCategory = "5";
+        CurrQuestion = "Which Italian city is credited as the birthplace of the pizza?";
+        CurrCorrectAwnser1 = "Neaples";
+        CurrAwnser2 = "Rome";
+        CurrAwnser3 = "Piza";
+        CurrAwnser4 = "Bergamo";
+        CurrCategory = "Food";
         break;
         case 5:
-        CurrQuestion = "TEST5";
-        CurrCorrectAwnser1 = "1";
-        CurrAwnser2 = "2";
-        CurrAwnser3 = "3";
-        CurrAwnser4 = "4";
-        CurrCategory = "5";
+        CurrQuestion = "How many keys are there on a piano?";
+        CurrCorrectAwnser1 = "88";
+        CurrAwnser2 = "60";
+        CurrAwnser3 = "100";
+        CurrAwnser4 = "90";
+        CurrCategory = "Art";
         break;
         case 6:
         CurrQuestion = "TEST6";
