@@ -37,7 +37,7 @@ public class GameHandler : MonoBehaviour
     [Header("Timer")]
     //GameObjects and Variables in charge of the times
     public float maxTime = 25f;
-    public float timeLeft;//
+    public float timeLeft;
     public Image timerBar;
 
     //FUNCTIONS

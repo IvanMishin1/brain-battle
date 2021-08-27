@@ -21,14 +21,23 @@ public class MenuHandler : MonoBehaviour
     {
         Menu.SetActive(false);
         Game.SetActive(true);
+        Settings.SetActive(false);
     }
     public void SettingsButtonClick()
     {
         Menu.SetActive(false);
+        Game.SetActive(false);
         Settings.SetActive(true);
     }
     public void ExitButtonClick()
     {
         Application.Quit();
+    }
+
+    public void BackToMenuClick()
+    {
+        Menu.SetActive(true);
+        Game.SetActive(false);
+        Settings.SetActive(false);
     }
 }
