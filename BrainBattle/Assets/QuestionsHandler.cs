@@ -47,10 +47,13 @@ public class QuestionsHandler : MonoBehaviour
     }
     public void QuestionGenerator()
     {
-        CurrQuestionID = Random.Range(0,6);
+        CurrQuestionID = Random.Range(0,26);
         Debug.Log("QuestionID = " + CurrQuestionID);
         switch(CurrQuestionID)
         {
+
+        // ENGLISH QUESTIONS
+
         case 0:
         CurrQuestion = "Witch city from the list has the largest population?";
         CurrCorrectAwnser1 = "Moscow";
@@ -251,47 +254,58 @@ public class QuestionsHandler : MonoBehaviour
         CurrAwnser4 = "4";
         CurrCategory = "5";
         break;
+
+        // RUSSIAN QUESTIONS
+
         case 25:
-        CurrQuestion = "TEST25";
-        CurrCorrectAwnser1 = "1";
-        CurrAwnser2 = "2";
-        CurrAwnser3 = "3";
-        CurrAwnser4 = "4";
-        CurrCategory = "5";
+        CurrQuestion = "В какой воде меньше содержание примесей,";
+        CurrCorrectAwnser1 = "В дождевой";
+        CurrAwnser2 = "В морской";
+        CurrAwnser3 = "В минеральной";
+        CurrAwnser4 = "В питевой";
+        CurrCategory = "Science";
         break;
         case 26:
-        CurrQuestion = "TEST26";
-        CurrCorrectAwnser1 = "1";
-        CurrAwnser2 = "2";
-        CurrAwnser3 = "3";
-        CurrAwnser4 = "4";
-        CurrCategory = "5";
+        CurrQuestion = "Какой газ является самым легким?";
+        CurrCorrectAwnser1 = "Водород";
+        CurrAwnser2 = "Гелий";
+        CurrAwnser3 = "Натрий";
+        CurrAwnser4 = "Кислород";
+        CurrCategory = "Science";
         break;
         case 27:
-        CurrQuestion = "TEST27";
-        CurrCorrectAwnser1 = "1";
-        CurrAwnser2 = "2";
-        CurrAwnser3 = "3";
-        CurrAwnser4 = "4";
-        CurrCategory = "5";
+        CurrQuestion = "Как называют жителей города Смоленска в РФ?";
+        CurrCorrectAwnser1 = "Смоляне";
+        CurrAwnser2 = "Смоленски";
+        CurrAwnser3 = "Смирчани";
+        CurrAwnser4 = "Смолоны";
+        CurrCategory = "Geography";
         break;
         case 28:
-        CurrQuestion = "TEST28";
-        CurrCorrectAwnser1 = "1";
-        CurrAwnser2 = "2";
-        CurrAwnser3 = "3";
-        CurrAwnser4 = "4";
-        CurrCategory = "5";
+        CurrQuestion = "Какой водопад в мире является самым высоким?";
+        CurrCorrectAwnser1 = "Анхель";
+        CurrAwnser2 = "Виктория";
+        CurrAwnser3 = "Ромеро";
+        CurrAwnser4 = "Гравити Фолз";
+        CurrCategory = "Geography";
         break;
         case 29:
-        CurrQuestion = "TEST29";
-        CurrCorrectAwnser1 = "1";
-        CurrAwnser2 = "2";
-        CurrAwnser3 = "3";
-        CurrAwnser4 = "4";
-        CurrCategory = "5";
+        CurrQuestion = "Сколько лет пролежал на печи известный богатырь Илья Муромец?";
+        CurrCorrectAwnser1 = "30 лет и 3 года";
+        CurrAwnser2 = "44 года и 8 дней";
+        CurrAwnser3 = "30 секунд";
+        CurrAwnser4 = "7 минут и 30 секунд";
+        CurrCategory = "Literature";
         break;
         case 30:
+        CurrQuestion = "Сказка «Курочка–Ряба» на самом деле имеет автора. Назовите его имя. Владимир Иванович Даль";
+        CurrCorrectAwnser1 = "Владимир Иванович Даль";
+        CurrAwnser2 = "Александр Сергеевич Пушкин";
+        CurrAwnser3 = "Михаил Юрьевич Лермонтов";
+        CurrAwnser4 = "Сергей Александрович Есенин";
+        CurrCategory = "Literature";
+        break;
+        case 31:
         CurrQuestion = "TEST30";
         CurrCorrectAwnser1 = "1";
         CurrAwnser2 = "2";
@@ -299,6 +313,159 @@ public class QuestionsHandler : MonoBehaviour
         CurrAwnser4 = "4";
         CurrCategory = "5";
         break;
+        case 32:
+        CurrQuestion = "TEST30";
+        CurrCorrectAwnser1 = "1";
+        CurrAwnser2 = "2";
+        CurrAwnser3 = "3";
+        CurrAwnser4 = "4";
+        CurrCategory = "5";
+        break;
+        case 33:
+        CurrQuestion = "TEST30";
+        CurrCorrectAwnser1 = "1";
+        CurrAwnser2 = "2";
+        CurrAwnser3 = "3";
+        CurrAwnser4 = "4";
+        CurrCategory = "5";
+        break;
+        case 34:
+        CurrQuestion = "TEST30";
+        CurrCorrectAwnser1 = "1";
+        CurrAwnser2 = "2";
+        CurrAwnser3 = "3";
+        CurrAwnser4 = "4";
+        CurrCategory = "5";
+        break;
+        case 35:
+        CurrQuestion = "TEST30";
+        CurrCorrectAwnser1 = "1";
+        CurrAwnser2 = "2";
+        CurrAwnser3 = "3";
+        CurrAwnser4 = "4";
+        CurrCategory = "5";
+        break;
+        case 36:
+        CurrQuestion = "TEST30";
+        CurrCorrectAwnser1 = "1";
+        CurrAwnser2 = "2";
+        CurrAwnser3 = "3";
+        CurrAwnser4 = "4";
+        CurrCategory = "5";
+        break;
+        case 37:
+        CurrQuestion = "TEST30";
+        CurrCorrectAwnser1 = "1";
+        CurrAwnser2 = "2";
+        CurrAwnser3 = "3";
+        CurrAwnser4 = "4";
+        CurrCategory = "5";
+        break;
+        case 38:
+        CurrQuestion = "TEST30";
+        CurrCorrectAwnser1 = "1";
+        CurrAwnser2 = "2";
+        CurrAwnser3 = "3";
+        CurrAwnser4 = "4";
+        CurrCategory = "5";
+        break;
+        case 39:
+        CurrQuestion = "TEST30";
+        CurrCorrectAwnser1 = "1";
+        CurrAwnser2 = "2";
+        CurrAwnser3 = "3";
+        CurrAwnser4 = "4";
+        CurrCategory = "5";
+        break;
+        case 40:
+        CurrQuestion = "TEST30";
+        CurrCorrectAwnser1 = "1";
+        CurrAwnser2 = "2";
+        CurrAwnser3 = "3";
+        CurrAwnser4 = "4";
+        CurrCategory = "5";
+        break;
+        case 41:
+        CurrQuestion = "TEST30";
+        CurrCorrectAwnser1 = "1";
+        CurrAwnser2 = "2";
+        CurrAwnser3 = "3";
+        CurrAwnser4 = "4";
+        CurrCategory = "5";
+        break;
+        case 42:
+        CurrQuestion = "TEST30";
+        CurrCorrectAwnser1 = "1";
+        CurrAwnser2 = "2";
+        CurrAwnser3 = "3";
+        CurrAwnser4 = "4";
+        CurrCategory = "5";
+        break;
+        case 43:
+        CurrQuestion = "TEST30";
+        CurrCorrectAwnser1 = "1";
+        CurrAwnser2 = "2";
+        CurrAwnser3 = "3";
+        CurrAwnser4 = "4";
+        CurrCategory = "5";
+        break;
+        case 44:
+        CurrQuestion = "TEST30";
+        CurrCorrectAwnser1 = "1";
+        CurrAwnser2 = "2";
+        CurrAwnser3 = "3";
+        CurrAwnser4 = "4";
+        CurrCategory = "5";
+        break;
+        case 45:
+        CurrQuestion = "TEST30";
+        CurrCorrectAwnser1 = "1";
+        CurrAwnser2 = "2";
+        CurrAwnser3 = "3";
+        CurrAwnser4 = "4";
+        CurrCategory = "5";
+        break;
+        case 46:
+        CurrQuestion = "TEST30";
+        CurrCorrectAwnser1 = "1";
+        CurrAwnser2 = "2";
+        CurrAwnser3 = "3";
+        CurrAwnser4 = "4";
+        CurrCategory = "5";
+        break;
+        case 47:
+        CurrQuestion = "TEST30";
+        CurrCorrectAwnser1 = "1";
+        CurrAwnser2 = "2";
+        CurrAwnser3 = "3";
+        CurrAwnser4 = "4";
+        CurrCategory = "5";
+        break;
+        case 48:
+        CurrQuestion = "TEST30";
+        CurrCorrectAwnser1 = "1";
+        CurrAwnser2 = "2";
+        CurrAwnser3 = "3";
+        CurrAwnser4 = "4";
+        CurrCategory = "5";
+        break;
+        case 49:
+        CurrQuestion = "TEST30";
+        CurrCorrectAwnser1 = "1";
+        CurrAwnser2 = "2";
+        CurrAwnser3 = "3";
+        CurrAwnser4 = "4";
+        CurrCategory = "5";
+        break;
+        case 50:
+        CurrQuestion = "TEST30";
+        CurrCorrectAwnser1 = "1";
+        CurrAwnser2 = "2";
+        CurrAwnser3 = "3";
+        CurrAwnser4 = "4";
+        CurrCategory = "5";
+        break;
+        
         }
         Text0.GetComponent<UnityEngine.UI.Text>().text = CurrQuestion.ToString();
 
