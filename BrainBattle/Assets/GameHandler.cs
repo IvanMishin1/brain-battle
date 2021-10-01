@@ -21,7 +21,9 @@ public class GameHandler : MonoBehaviour
     public float Score; //Players Score
     public float WinStreak; //Quantity of wins in a row 
     public float RandomPosition; //Variable that holds the random position of the correct awnser
+    public float Round; //The quantity of question already awnsered
     public string Lang; //Holds the game's current language 
+    public string GameType;//The game type
     public bool timerPause = false;
 
     [Header("Button Packs")]
@@ -63,7 +65,6 @@ public class GameHandler : MonoBehaviour
     }
     public void Start() 
     {
-        //Timer = GetComponent<Image>();
         timeLeft = maxTime;
         timerPause = true;
     }

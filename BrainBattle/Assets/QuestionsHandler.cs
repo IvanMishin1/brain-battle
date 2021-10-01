@@ -47,7 +47,7 @@ public class QuestionsHandler : MonoBehaviour
     }
     public void QuestionGenerator()
     {
-        CurrQuestionID = Random.Range(0,26);
+        CurrQuestionID = Random.Range(0,6);
         Debug.Log("QuestionID = " + CurrQuestionID);
         switch(CurrQuestionID)
         {
