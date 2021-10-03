@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "710728531727",
+    "project_id": "quizgame001",
+    "storage_bucket": "quizgame001.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:710728531727:android:6e7c2a4cf8c28c65a6487a",
+        "android_client_info": {
+          "package_name": "com.IvanMishin.QuizGame"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "710728531727-r982jvr12uhf0iuou7jdc37scai5d8b3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBx_O9DNYEzwTh5-oKxsMeB57SsjuDFGeE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "710728531727-r982jvr12uhf0iuou7jdc37scai5d8b3.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "710728531727-hjv3idfaoagk0t4ao8kreloo8aumo9tr.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.IvanMishin.QuizGame"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

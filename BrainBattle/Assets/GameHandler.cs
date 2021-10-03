@@ -26,6 +26,9 @@ public class GameHandler : MonoBehaviour
     public string GameType;//The game type
     public bool timerPause = false;
 
+    public float TimesLost; //Variables that show the stats handler script the stats 
+    public float TimesWon;
+
     [Header("Button Packs")]
     //Button Packs are different combinations of the correct button position
     public GameObject ButtonPack1; //For example: in this button pack the correct awnser is always the top left button 
@@ -51,6 +54,7 @@ public class GameHandler : MonoBehaviour
         }
         if(timeLeft <= 0f && timerPause == false)
         {
+            Debug.Log("You Ran Out Of Time!"); 
             Lost();
         }
         if(timerPause == false)
@@ -94,7 +98,6 @@ public class GameHandler : MonoBehaviour
         switch(RandomPosition)  
         { // This switch statement deploys the correct button combinations 
         case 1:
-            Debug.Log("Setting Position to " + RandomPosition);
             ButtonPack1.SetActive(false);
             ButtonPack1.SetActive(true);
             ButtonPack2.SetActive(false);
@@ -102,7 +105,6 @@ public class GameHandler : MonoBehaviour
             ButtonPack4.SetActive(false);
             break;
         case 2:
-            Debug.Log("Setting Position to " + RandomPosition);
             ButtonPack2.SetActive(false);
             ButtonPack1.SetActive(false);
             ButtonPack2.SetActive(true);
@@ -110,7 +112,6 @@ public class GameHandler : MonoBehaviour
             ButtonPack4.SetActive(false);
             break;
         case 3:
-            Debug.Log("Setting Position to " + RandomPosition);
             ButtonPack1.SetActive(false);
             ButtonPack1.SetActive(false);
             ButtonPack2.SetActive(false);
@@ -118,7 +119,6 @@ public class GameHandler : MonoBehaviour
             ButtonPack4.SetActive(false);
             break;
         case 4:
-            Debug.Log("Setting Position to " + RandomPosition);
             ButtonPack4.SetActive(false);
             ButtonPack1.SetActive(false);
             ButtonPack2.SetActive(false);
@@ -132,7 +132,8 @@ public class GameHandler : MonoBehaviour
         timerPause = true;  
         Debug.Log("You Won!");                                             
         Score = Score + 1;                                 
-        WinStreak = WinStreak + 1;                            
+        WinStreak = WinStreak + 1; 
+        TimesWon=TimesWon + 1;                           
         NextQuestionButton.SetActive(true);
         Buttons[0].GetComponent<Button>().interactable = false;
         Buttons[1].GetComponent<Button>().interactable = false;
@@ -157,6 +158,7 @@ public class GameHandler : MonoBehaviour
         Debug.Log("You Lost!");
         Score = Score - 1;
         WinStreak = 0f;
+        TimesLost=TimesLost + 1;
         NextQuestionButton.SetActive(true);
         Buttons[0].GetComponent<Button>().interactable = false;
         Buttons[1].GetComponent<Button>().interactable = false;
