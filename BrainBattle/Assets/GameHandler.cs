@@ -28,6 +28,7 @@ public class GameHandler : MonoBehaviour
 
     public float TimesLost; //Variables that show the stats handler script the stats 
     public float TimesWon;
+    public float Total;
 
     [Header("Button Packs")]
     //Button Packs are different combinations of the correct button position
@@ -62,6 +63,8 @@ public class GameHandler : MonoBehaviour
         timeLeft -= Time.deltaTime;
         timerBar.fillAmount = timeLeft / maxTime;
         }
+
+        
     }
     public void Awake()
     {
