@@ -27,7 +27,7 @@ public class Analitics : MonoBehaviour
         CorrectQuestionsIndex = gameHandler.TimesWon / (gameHandler.TimesWon + gameHandler.TimesLost);
 
         //VISUAL BAR CHART
-        if(CorrectQuestionsIndex > 0)
+        if(CorrectQuestionsIndex > 0f)
         {
         BarChartIncorrect.fillAmount = IncorrectQuestionsIndex;
         BarChartCorrect.fillAmount = CorrectQuestionsIndex;
