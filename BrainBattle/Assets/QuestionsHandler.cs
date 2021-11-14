@@ -47,7 +47,7 @@ public class QuestionsHandler : MonoBehaviour
     }
     public void QuestionGenerator()
     {
-        CurrQuestionID = Random.Range(0,6);
+        CurrQuestionID = Random.Range(0,10);
         Debug.Log("QuestionID = " + CurrQuestionID);
         switch(CurrQuestionID)
         {
@@ -103,36 +103,36 @@ public class QuestionsHandler : MonoBehaviour
         CurrCategory = "Art";
         break;
         case 6:
-        CurrQuestion = "TEST6";
-        CurrCorrectAwnser1 = "1";
-        CurrAwnser2 = "2";
-        CurrAwnser3 = "3";
-        CurrAwnser4 = "4";
-        CurrCategory = "5";
+        CurrQuestion = "Who Won the MVP award 2001 (NBA)";
+        CurrCorrectAwnser1 = "Allen Iverson";
+        CurrAwnser2 = "Chris Paul";
+        CurrAwnser3 = "Shaquille O'Neal";
+        CurrAwnser4 = "Scottie Pippen";
+        CurrCategory = "Sports";
         break;
         case 7:
-        CurrQuestion = "TEST7";
-        CurrCorrectAwnser1 = "1";
-        CurrAwnser2 = "2";
-        CurrAwnser3 = "3";
-        CurrAwnser4 = "4";
-        CurrCategory = "5";
+        CurrQuestion = "Witch one of these people was one of the founding fathers of America";
+        CurrCorrectAwnser1 = "John ADAMS";
+        CurrAwnser2 = "Steve PAUL";
+        CurrAwnser3 = "Peter ABRAHAM";
+        CurrAwnser4 = "Nicola DONCIKE";
+        CurrCategory = "History";
         break;
         case 8:
-        CurrQuestion = "TEST8";
-        CurrCorrectAwnser1 = "1";
-        CurrAwnser2 = "2";
-        CurrAwnser3 = "3";
-        CurrAwnser4 = "4";
-        CurrCategory = "5";
+        CurrQuestion = "Name two Double Land Locked countries";
+        CurrCorrectAwnser1 = "Liechtenstein and Uzbekistan";
+        CurrAwnser2 = "South Sudan and North Sudan";
+        CurrAwnser3 = "Wyoming and Arkansas";
+        CurrAwnser4 = "Saarland and Cuba";
+        CurrCategory = "Geography";
         break;
         case 9:
-        CurrQuestion = "TEST9";
-        CurrCorrectAwnser1 = "1";
-        CurrAwnser2 = "2";
-        CurrAwnser3 = "3";
-        CurrAwnser4 = "4";
-        CurrCategory = "5";
+        CurrQuestion = "Who is Steph CURRY?";
+        CurrCorrectAwnser1 = "NBA player";
+        CurrAwnser2 = "Golf player";
+        CurrAwnser3 = "5 star chef in France";
+        CurrAwnser4 = "Table tennis player";
+        CurrCategory = "Sports";
         break;
         case 10:
         CurrQuestion = "TEST10";
@@ -298,7 +298,7 @@ public class QuestionsHandler : MonoBehaviour
         CurrCategory = "Literature";
         break;
         case 30:
-        CurrQuestion = "Сказка «Курочка–Ряба» на самом деле имеет автора. Назовите его имя. Владимир Иванович Даль";
+        CurrQuestion = "Сказка «Курочка–Ряба» на самом деле имеет автора. Назовите его имя.";
         CurrCorrectAwnser1 = "Владимир Иванович Даль";
         CurrAwnser2 = "Александр Сергеевич Пушкин";
         CurrAwnser3 = "Михаил Юрьевич Лермонтов";
